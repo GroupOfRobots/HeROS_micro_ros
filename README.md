@@ -1,24 +1,31 @@
 # HeROS_micro_ros
-micro-ROS app for ESP32 with FreeRTOS
+
+### Description
+Controlling environmental obstacles as part of the HeROS project.
+
+
+### Hardware:
+* [FireBeetle ESP32 IoT Microcontroller](https://www.dfrobot.com/product-1590.html)
+
 
 ### ESP-IDF installation
 1. It's highly recommend to install the ESP-IDF as VSCode Extension using [this manual](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md).
 2. Choose **Express** setup mode.
 
+### Potential issues when connecting to ESP32 over USB
+1. Add yourselt to `dialout` group.
+2. `sudo apt-get remove brltty`
 
-sudo apt-get remove brltty
-
-sudo dmesg --follow
-
-dialout group 
-
-mkdir uros_ws
-
-### App:
+### Workspace organization
 ```
-mkdir app_ws
-mkdir src
-cd app_ws/src
+~/uros_ws |- app_ws
+          |- agent_ws
+
+```
+
+### micro-ROS application:
+```
+cd uros_ws/app_ws/src/
 git clone git@github.com:micro-ROS/micro_ros_espidf_component.git -b humble
 cd micro_ros_espidf_component/
 source ~/esp/v5.2.1/esp-idf/export.sh
@@ -29,12 +36,9 @@ idf.py menuconfig
 idf.py build flash monitor
 ```
 
-
 ### Agent:
 ```
-mkdir agent_ws
-mkdir src
-cd agent_ws/src
+cd uros_ws/agent_ws/src/
 git clone git@github.com:micro-ROS/micro_ros_setup.git -b humble
 source /opt/ros/humble/setup.bash
 colcon build
