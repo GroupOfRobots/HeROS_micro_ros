@@ -26,11 +26,11 @@ Controlling environmental obstacles as part of the HeROS project.
 ### micro-ROS application:
 ```
 cd uros_ws/app_ws/src/
-git clone git@github.com:micro-ROS/micro_ros_espidf_component.git -b humble
-cd micro_ros_espidf_component/
+git clone git@github.com:jkaniuka/HeROS_micro_ros.git
+cd HeROS_micro_ros/
 source ~/esp/v5.2.1/esp-idf/export.sh
 pip3 install catkin_pkg lark-parser colcon-common-extensions
-cd <app_dir>
+cd obstacles_controller/
 idf.py set-target esp32
 idf.py menuconfig
 idf.py build flash monitor
