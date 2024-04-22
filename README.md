@@ -13,7 +13,7 @@ Controlling environmental obstacles as part of the HeROS project.
 2. Choose **Express** setup mode.
 
 ### Potential issues when connecting to ESP32 over USB
-1. Add yourselt to `dialout` group.
+1. Add yourself to `dialout` group.
 2. `sudo apt-get remove brltty`
 
 ### Workspace organization
@@ -36,7 +36,7 @@ idf.py menuconfig
 idf.py build flash monitor
 ```
 
-### Agent:
+### micro-ROS agent:
 ```
 cd uros_ws/agent_ws/src/
 git clone git@github.com:micro-ROS/micro_ros_setup.git -b humble

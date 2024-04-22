@@ -3,3 +3,6 @@ micro_ros_dev/
 micro_ros_src/
 obstacles_controller/build
 settings.json
+libmicroros.a
+.vscode/
+esp32_toolchain.cmake
