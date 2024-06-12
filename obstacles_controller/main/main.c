@@ -41,7 +41,7 @@
 #define PWM_FREQUENCY 1000 // PWM frequency in Hz
 
 #define MOTOR_STBY_GPIO 23
-#define ROT_VEL 210
+#define ROT_VEL 125
 #define PERIOD 3200
 
 void motor_init() {
